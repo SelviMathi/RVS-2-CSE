@@ -141,8 +141,25 @@ void main()
      printf("%d ",arr[index]);
 }
 8.Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.
+#include <stdio.h>
+int main() {
+int noe;
+scanf("%d",&noe);
+
+int arr[noe],keyelement,coe=0;
+printf("Enter key element");
+scanf("%d",&keyelement);
+printf("\nArray elements");
+for(int index=0;index<noe;index++)
+{scanf("%d",&arr[index]);
+if(arr[index]<keyelement)
+coe++;
+}
+printf("\ncount lesser than keyelement%d",coe);
 
 
+return 0;
+}
 9.Write a program to search an element in the given array and print the searched elements index. If no such elements were found print -1
 
 
