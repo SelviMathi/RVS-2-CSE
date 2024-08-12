@@ -1,1 +1,73 @@
+1.Display array elements forward and reverse
+
+
+#include <stdio.h>
+int main() {
+int noe;
+scanf("%d",&noe);
+
+int arr[noe];
+
+for(int index=0;index<noe;index++)
+scanf("%d",&arr[index]);
+
+for(int index=0;index<noe;index++)
+printf("%d ",arr[index]);
+for(int index=noe-1;index>=0;index--)
+printf("%d ",arr[index]);
+
+  return 0;
+}
+
+2. Count of ZERO & ONEs in array
+#include <stdio.h>
+int main() {
+int noe;
+scanf("%d",&noe);
+
+int arr[noe],coz=0;
+
+for(int index=0;index<noe;index++)
+{
+scanf("%d",&arr[index]);
+if(arr[index]==0;
+coz++;
+}
+printf("0:%d 1:%d",coz,noe-coz);
+return 0;
+}
+
+3.Search element in array
+// Online C compiler to run C program online
+#include <stdio.h>
+int main() {
+int noe;
+scanf("%d",&noe);
+
+int arr[noe],Selement;
+
+for(int index=0;index<noe;index++)
+scanf("%d",&arr[index]);
+
+printf("\nSearch element");
+scanf("%d",&Selement);
+
+for(int index=0;index<noe;index++)
+{
+    if(arr[index]==Selement)
+ {   printf("\nElement found");
+    break;
+}
+    else if(index==noe-1)
+    printf("\nElement not found");
+}
+
+    return 0;
+}
+
+4.Min of an array
+
+5.Max of an array
+
+6.Sum of array elements
 
