@@ -125,8 +125,7 @@ for( index=0;index<noe;index++)
 8.Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.
 
 
-9.Write a  Program to print all the repeated elements in a sorted array.
+9.Write a program to search an element in the given array and print the searched elements index. If no such elements were found print -1
 
 
-10.Write a program to search an element in the given array and print the searched elements index. If no such elements were found print -1
-
+10.Write a program to replace every element in the given array with sum ofits other elements.
