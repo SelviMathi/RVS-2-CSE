@@ -161,6 +161,45 @@ printf("\ncount lesser than keyelement%d",coe);
 return 0;
 }
 9.Write a program to search an element in the given array and print the searched elements index. If no such elements were found print -1
+#include <stdio.h>
+int main() {
+int noe;
+scanf("%d",&noe);
+
+int arr[noe],Selement;
+
+for(int index=0;index<noe;index++)
+scanf("%d",&arr[index]);
+
+printf("\nSearch element");
+scanf("%d",&Selement);
+
+for(int index=0;index<noe;index++)
+{
+    if(arr[index]==Selement)
+ {   printf("%d",index);
+    break;
+}
+    else if(index==noe-1)
+    printf("-1");
+}
+
+    return 0;
+}
 
 
 10.Write a program to replace every element in the given array with sum ofits other elements.
+#include<stdio.h>
+void main()
+{
+    int noe,index,sum=0;
+    scanf("%d",&noe);
+    int arr[noe];
+    for(index=0;index<noe;index++)
+    { scanf("%d",&arr[index]);
+       sum=sum+arr[index];
+    }
+      for(index=0;index<noe;index++)
+        printf("%d ",sum-arr[index]);
+
+}
