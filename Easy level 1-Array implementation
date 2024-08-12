@@ -117,8 +117,29 @@ void main()
 }
 
 7.Write a  program to sort an array in ascending order.
-
-
+#include<stdio.h>
+void main()
+{
+    int noe,index,sum=0;
+    scanf("%d",&noe);
+    int arr[noe];
+    for(index=0;index<noe;index++)
+   scanf("%d",&arr[index]);
+      for(int index1=0;index1<noe;index1++)
+      { 
+          for(index=index1+1;index<noe;index++)
+      {
+          if(arr[index1]>arr[index])
+          {
+             int temp=arr[index1];
+             arr[index1]=arr[index];
+             arr[index]=temp;
+          }
+      }
+      }
+     for(index=0;index<noe;index++)
+     printf("%d ",arr[index]);
+}
 8.Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.
 
 
