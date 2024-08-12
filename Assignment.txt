@@ -1,0 +1,70 @@
+1.sum of the digits of the user input
+2.multiply the no with 8 without using multiplication operator
+3.DESCENDING ORDER OF 4 NO
+4.PRINT 1-1000 WITH0UT USING LOOPING STATEMENTS
+5.pattern printing of ur name(5letter)
+6.concentric square
+7.lcm of 3 no
+8.gcd of 3 no
+9.factors of a no
+10.second largest and second smallest in array
+11.first non repeating character in array
+12.remove the spaces from string
+13.power of a no
+14.reverse a no 
+15.prime no or not
+16.sqr root of a no
+17.perfect no
+18.Write a program to segregate number such that all odd digits comes first and then even digits and print the  newly formed number. 
+19.Sample input 1
+5
+
+Sample output 1
+5
+45
+345
+2345
+12345
+
+20.Given an array of integer , write a program to check whether an Arithmetic progression can be formed or not
+
+For example:
+
+    The given array is: 23,3,18,13,8
+
+    The output is : YES
+
+Explanation:
+
+    Rearrange the array 3,8,13,18,23 which forms the A.p
+
+
+
+ Input Format:
+
+     The first line has the size of the array
+
+     Second line contains the elements of the array.
+
+Constraints:
+
+    1 <= N <= 10^5
+
+    1 <= arr[i] <= 10^9
+
+Output Format:
+
+    print Yes or No
+
+Sample Input:
+
+    5
+
+    23 3 18 13 8
+
+Sample Output:
+
+    Yes
+
+
+21.
