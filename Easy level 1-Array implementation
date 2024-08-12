@@ -106,18 +106,15 @@ for( index=0;index<noe;index++)
 #include<stdio.h>
 void main()
 {
-int noe,index;
-scanf("%d ",&noe);
-int arr[noe],sum=0;
-for( index=0;index<noe;index++)
-    scanf("%d",&arr[index]);
-int min=arr[0];
-for( index=0;index<noe;index++)
-   sum+=arr[index];
-   printf("%d",sum);
-
+    int noe,index,sum=0;
+    scanf("%d",&noe);
+    int arr[noe];
+    for(index=0;index<noe;index++)
+   { scanf("%d",&arr[index]);
+       sum=sum+arr[index];
    }
-
+   printf("\nSum is %d",sum);
+}
 
 7.Write a  program to sort an array in ascending order.
 
