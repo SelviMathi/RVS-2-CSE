@@ -1,0 +1,33 @@
+1.Write a program to accept N values into an integer array and display the contents of the array in the reverse order.
+2.Write a  program to count the number of 0s and 1s in an array that is in random order. You may assume that the array consists of only 0s and 1s.
+3.Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.
+4.Write a  Program to print all the repeated elements in a sorted array.
+5.Write a program to search an element in the given array and print the searched elements index. If no such elements were found print -1
+6.You are given an array of 0s and 1s in random order. Segregate 0s on left side and 1s on right side of the array . 
+Input array   =  [0, 1, 0, 1, 0, 0, 1, 1, 1, 0] 
+Output array =  [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] 
+7.Write a program  to replace every element in an array with the sum of its right side elements
+8.Write a program  to reverse the array elements
+9.Write a program  to insert the value at given position in the array.
+10.Write a program  to delete the value at given position from the array.
+11.Write a program  to swap every pair of  adjacent array elements
+12.Write a program  to left rotate for given times of an array elements
+13.Given an array X with n number of elements, return true if the given array X is sorted else return false. You may consider multiple positions may be shifted in the array X. 
+Example 1: Input: X=[1,2,3,4,5] Output: true 
+Example 2: Input: X=[3,4,5, 1,2,] Output: true
+ Example 3: Input: X=[3,1,2,4,5] Output: false
+14.Write a program  to remove the duplicates in an array .
+15.Write a program  to find second largest and second smallest in array
+16.You are given an array of integers, your task is to move all the zeros in the array to the end of the array and move non-negative integers to the front by maintaining their order.
+Examples
+Input:
+ 1 ,0 ,2 ,3 ,0 ,4 ,0 ,1
+Output:
+ 1 ,2 ,3 ,4 ,1 ,0 ,0 ,0
+Explanation:
+ All the zeros are moved to the end and non-negative integers are moved to front by maintaining order
+17. Given two sorted arrays, find their union and intersection.
+Input: arr1[] = {1, 3, 4, 5, 7}
+        arr2[] = {2, 3, 5, 6} 
+Output: Union : {1, 2, 3, 4, 5, 6, 7} 
+         Intersection : {3, 5}
