@@ -1,0 +1,183 @@
+1.You are given an array of 0s and 1s in random order. Segregate 0s on left side and 1s on right side of the array . 
+Input array   =  [0, 1, 0, 1, 0, 0, 1, 1, 1, 0] 
+Output array =  [0, 0, 0, 0, 0, 1, 1, 1, 1, 1] 
+#include<stdio.h>
+void main()
+{
+    int size;
+    scanf("%d",&size);
+    int arr[size];
+    for(int index=0;index<size;index++)
+    scanf("%d",&arr[index]);
+    for(int i=0;i<size;i++)
+    {
+    int min=arr[i];
+    for(int j=i+1;j<size;j++)
+    {
+        if(arr[j]<min)
+        {
+            int temp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=temp;
+        }
+    }
+    }
+    for(int index=0;index<size;index++)
+    printf("%d ",arr[index]);
+    
+}
+2.Write a program  to replace every element in an array with the sum of its right side elements
+#include<stdio.h>
+void main()
+{
+    int size;
+    scanf("%d",&size);
+    int arr[size],sum=0;
+    for(int index=0;index<size;index++)
+    {scanf("%d",&arr[index]);
+    sum+=arr[index];
+    }for(int index=0;index<size;index++)
+   { sum-=arr[index];
+   printf("%d ",sum);
+   }
+}
+3.Write a program  to reverse the array elements
+
+#include<stdio.h>
+void main()
+{
+    int size;
+    scanf("%d",&size);
+    int arr[size];
+    for(int index=0;index<size;index++)
+    scanf("%d",&arr[index]);
+    int start= 0,last=size-1;
+    while(start<last)
+    {
+        int temp=arr[start];
+        arr[start]=arr[last];
+        arr[last]=temp;
+        start++;
+        last--;
+    }
+    
+    for(int index=0;index<size;index++)
+    printf("%d ",arr[index]);
+    
+}
+
+4.Write a program  to insert the value at given position in the array.
+#include<stdio.h>
+void main()
+{
+int arr[10];
+int noe;
+scanf("%d ",&noe);
+for(int count=0;count<noe;count++)
+    scanf("%d",&arr[count]);
+   int value,pos;
+   scanf("%d %d",&value,&pos);
+    for(int count=noe;count>=pos;count--)
+    arr[count]=arr[count-1];
+    arr[pos-1]=value;
+    for(int count=0;count<=noe;count++)
+    printf("%d ",arr[count]);
+}
+
+5.Write a program  to delete the value at given position from the array.
+#include<stdio.h>
+void main()
+{
+int arr[10];
+int noe;
+scanf("%d ",&noe);
+for(int count=0;count<noe;count++)
+    scanf("%d",&arr[count]);
+   int pos;
+   scanf("%d",&pos);
+    for(int count=pos-1;count<noe-1;count++)
+    arr[count]=arr[count+1];
+    noe--;
+    for(int count=0;count<noe;count++)
+   printf("%d ",arr[count]);
+}
+
+6.Write a program  to swap every pair of  adjacent array elements.
+#include<stdio.h>
+void main()
+{
+int noe;
+scanf("%d ",&noe);
+int arr[noe];
+for(int count=0;count<noe;count++)
+    scanf("%d",&arr[count]);
+for(int start=0;start<noe-1;start+=2)
+    {
+   int temp=arr[start];
+    arr[start]=arr[start+1];
+    arr[start+1]=temp;
+    }
+    for(int count=0;count<noe;count++)
+    printf("%d ",arr[count]);
+}
+
+7.Write a program  to left rotate for given times of an array elements.
+#include<stdio.h>
+void main()
+{
+    int size,temp;
+    scanf("%d",&size);
+    int arr[size];
+    for(int index=0;index<size;index++)
+    scanf("%d",&arr[index]);
+   int rot;
+   scanf("%d",&rot);
+   for(int i=1;i<=rot;i++)
+   {
+        temp=arr[0];
+      for(int index=0;index<size;index++)
+    arr[index]=arr[index+1];
+   
+     arr[size-1]=temp;
+   } for(int index=0;index<size;index++)
+    printf("%d ",arr[index]);
+    
+}
+
+8.Write a program  to remove the duplicates in an array .
+#include<stdio.h>
+void main()
+{
+int arr[50],inx;
+int noe;
+scanf("%d",&noe);
+
+for(int count=0;count<noe;count++)
+    scanf("%d",&arr[count]);
+
+
+    for(int start=0;start<noe-1;start++)
+{
+   for(int inx=start+1;inx<noe;inx++)
+{
+
+if (arr[start]==arr[inx])
+{
+for(int inloop=inx;inloop<noe;inloop++)
+arr[inloop]=arr[inloop+1];
+noe--;
+inx--;
+}
+}
+}
+   for(int count=0;count<noe;count++)
+   printf("%d ",arr[count]);
+}
+
+9.Write a program  to find second largest and second smallest in array
+
+10. Given two sorted arrays, find their union and intersection.
+Input: arr1[] = {1, 3, 4, 5, 7}
+        arr2[] = {2, 3, 5, 6} 
+Output: Union : {1, 2, 3, 4, 5, 6, 7} 
+         Intersection : {3, 5}
