@@ -1,0 +1,125 @@
+//DISPLAY 2D
+
+#include <stdio.h>
+int main()
+{
+ int row,col;
+ scanf("%d %d",&row,&col);
+int arr[row][col];
+for(int i=0;i<row;i++)
+{
+    for(int j=0;j<col;j++)
+    scanf("%d",&arr[i][j]);
+}
+for(int i=0;i<row;i++,printf("\n"))
+{
+    for(int j=0;j<col;j++)
+    printf("%d ",arr[i][j]);
+}
+ 
+    return 0;
+}
+
+//MIN IN array
+#include <stdio.h>
+#include<limits.h>
+int main()
+{
+ int row,col;
+ scanf("%d %d",&row,&col);
+int arr[row][col];
+for(int i=0;i<row;i++)
+{
+    for(int j=0;j<col;j++)
+    scanf("%d",&arr[i][j]);
+}
+int min=arr[0][0];
+ for(int i=0;i<col;i++)
+ {
+     for(int j=0;j<row;j++)
+     {if(arr[i][j]<min)
+     min=arr[i][j];
+    }
+  }
+  printf("%d ", min);
+
+    return 0;
+}
+
+//Max in row
+#include <stdio.h>
+#include<limits.h>
+int main()
+{
+ int row,col;
+ scanf("%d %d",&row,&col);
+int arr[row][col];
+for(int i=0;i<row;i++)
+{
+    for(int j=0;j<col;j++)
+    scanf("%d",&arr[i][j]);
+}
+ for(int i=0;i<col;i++)
+ {
+     int max=INT_MIN;
+     for(int j=0;j<row;j++)
+     if(arr[i][j]>max)
+     max=arr[i][j];
+    printf("%d ", max);
+}
+    return 0;
+}
+
+///sum of 2 2D matrix
+#include <stdio.h>
+#include<limits.h>
+int main()
+{
+ int row,col;
+ scanf("%d %d",&row,&col);
+int arr[row][col],arr1[row][col],sum[row][col];
+for(int i=0;i<row;i++)
+{
+    for(int j=0;j<col;j++)
+    scanf("%d",&arr[i][j]);
+}
+for(int i=0;i<row;i++)
+{
+    for(int j=0;j<col;j++)
+    scanf("%d",&arr1[i][j]);
+}
+ for(int i=0;i<row;i++,printf("\n"))
+ {
+      for(int j=0;j<col;j++)
+    {sum[i][j]=arr[i][j]+arr1[i][j];
+    printf("%d ", sum[i][j]);
+}}
+    return 0;
+}
+
+//sum of Col in 2D
+#include <stdio.h>
+#include<limits.h>
+int main()
+{
+ int row,col;
+ scanf("%d %d",&row,&col);
+int arr[row][col];
+for(int i=0;i<row;i++)
+{
+    for(int j=0;j<col;j++)
+    scanf("%d",&arr[i][j]);
+}
+ for( int i=0; i<row; i++ )
+    {
+        int colsum=0;
+        for( int j=0; j<col; j++ )
+        {
+            colsum = colsum+arr[j][i] ;
+        }
+        printf( "%d\n",colsum );
+    }
+    return 0;
+}
+
+
