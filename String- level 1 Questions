@@ -51,13 +51,36 @@ int main() {
             return 0;
 }
 
+4.Write a program in C to concatenate a string2 to string1 without using library functions.
 
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    char name[SIZE],name1[SIZE];
+    scanf("%s",name);
+    scanf("%s",name1);
+    int index=0,index1=0;
+    while(name[index]!='\0')
+    index++;
+    while(name1[index1]!='\0')
+     {
+    name[index]=name1[index1];
+    index++;
+    index1++;
+    }
+    //name1[index]='\0';
+    printf("%s",name);
+    
+            return 0;
+}
 
-3.Write a program in C to count the total number of alphabets, digits and special characters in a string.
-4.Write a program in C to count the total number of vowels or consonants in a string.
-5.Write a program in C to convert string to uppercase
-6.Write a program in C to convert string to lowercase
-7.Write a program in C to convert string to toggle case	
-8.Write a program in C to count the total number of words in a Sentence.
-9.Write a program in C to separate individual characters from a string.
-10.Write a program in C to print individual characters of a string in reverse order.
+5.Write a program in C to count the total number of alphabets, digits and special characters in a string.
+6.Write a program in C to count the total number of vowels or consonants in a string.
+7.Write a program in C to convert string to uppercase
+8.Write a program in C to convert string to lowercase
+9.Write a program in C to convert string to toggle case	
+10.Write a program in C to count the total number of words in a Sentence.
+11.Write a program in C to separate individual characters from a string.
+12.Write a program in C to print individual characters of a string in reverse order.
