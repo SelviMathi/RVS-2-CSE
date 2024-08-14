@@ -1,0 +1,184 @@
+1. Frequency of occurence
+
+#include<stdio.h>
+void main()
+{
+
+    char str[50]="RVSCCT";
+    char alphabets[123]={0};
+    int index=0;
+    while(str[index] !='\0')
+        {
+        alphabets[str[index]]++;
+        index++;
+        }
+    for(int i=0;i<123;i++)
+    {
+        if(alphabets[i]!=0)
+        printf("%c--%d time\n",i,alphabets[i]);
+        
+    }
+    
+}
+2. Frequency of occurence from user input by converting to lowercase
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[50];
+    int index = 0;
+     fgets(str, sizeof(str), stdin);
+    char alphabets[26] = {0};
+
+    while (str[index] != '\0') {
+            alphabets[tolower(str[index]) - 97]++;
+                index++;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (alphabets[i] != 0) {
+            printf("\n%c ---> %d time", i+97 , alphabets[i]);
+        }
+    }
+    return 0;
+}
+
+3.Repeating Characters
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[50];
+    int index = 0;
+     fgets(str, sizeof(str), stdin);
+    char alphabets[26] = {0};
+
+    while (str[index] != '\0') {
+            alphabets[tolower(str[index]) - 97]++;
+                index++;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (alphabets[i]>1) {
+            printf("%c", i+97);
+        }
+    }
+    return 0;
+}
+
+4.Sort the characters without repetion
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[50];
+    int index = 0;
+     fgets(str, sizeof(str), stdin);
+    char alphabets[26] = {0};
+
+    while (str[index] != '\0') {
+            alphabets[tolower(str[index]) - 97]++;
+                index++;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (alphabets[i] >=1) {
+            printf("%c", i+97);
+        }
+    }
+    return 0;
+}
+5.1st Repeating
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[50];
+    fgets(str, sizeof(str), stdin);
+    
+    char alphabets[26] = {0};
+    int index = 0;
+    
+    while (str[index] != '\0' && str[index] != '\n') {
+            alphabets[tolower(str[index]) - 97]++;
+            if (alphabets[tolower(str[index]) - 97] > 1) {
+                printf("%c\n", str[index]);
+                break;
+            }
+        
+        index++;
+    }
+
+    return 0;
+}
+
+6.Last Repeating
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[50];
+    int index = 0;
+     fgets(str, sizeof(str), stdin);
+    char alphabets[26] = {0};
+
+    while (str[index] != '\0') {
+            alphabets[tolower(str[index]) - 97]++;
+                index++;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (alphabets[i]>1) {
+            printf("%c", i+97);
+        break;}
+    }
+    return 0;
+}
+7.1st NON Repeating
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[50];
+    int index = 0;
+     fgets(str, sizeof(str), stdin);
+    char alphabets[26] = {0};
+
+    while (str[index] != '\0') {
+            alphabets[tolower(str[index]) - 97]++;
+                index++;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (alphabets[i]==1) {
+            printf("%c", i+97);
+        break;}
+    }
+    return 0;
+}
+
+8.last Non repeating
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[50],t;
+    int index = 0;
+     fgets(str, sizeof(str), stdin);
+    char alphabets[26] = {0};
+
+    while (str[index] != '\0') {
+            alphabets[tolower(str[index]) - 97]++;
+                index++;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (alphabets[str[i]-97]==1) 
+        t=str[i];
+    }
+            
+    printf("%c",t);
+    return 0;
+}
