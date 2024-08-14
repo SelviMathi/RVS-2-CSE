@@ -77,10 +77,103 @@ int main() {
 }
 
 5.Write a program in C to count the total number of alphabets, digits and special characters in a string.
+// Online C compiler to run C program online
+#include<stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    char str[SIZE];
+    int character=0,digit=0,specialch=0;
+    gets(str);
+    for(int index=0;str[index]!='\0';index++)
+    {
+        if((str[index]>='a' && str[index]<='z')||(str[index]>='A' && str[index]<='Z'))
+        character++;
+        else if(str[index]>='0' && str[index]<='9')
+        digit++;
+        else
+        specialch++;
+    }
+    printf("Charcters:%d\nDigits:%d\nSpecial charcter:%d",character,digit,specialch);
+            return 0;
+}
 6.Write a program in C to count the total number of vowels or consonants in a string.
+#include<stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    char str[SIZE];
+    int consonant=0,vowel=0;
+    fgets(str,sizeof(str),stdin);
+    for(int index=0;str[index]!='\0';index++)
+    {
+        if(str[index]=='a' || str[index]=='e' || str[index]=='i' || str[index]=='o' || str[index]=='u' || str[index]=='A' || str[index]=='E' || str[index]=='I' || str[index]=='O' || str[index]=='U')
+        vowel++;
+        else
+        consonant++;
+    }
+    printf("Consonant:%d\nVowel:%d",consonant-1,vowel);
+            return 0;
+}
 7.Write a program in C to convert string to uppercase
+#include<stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    int ch;
+    char str[SIZE];
+    fgets(str,sizeof(str),stdin);
+    for(ch=0;str[ch]!='\0';ch++)
+           str[ch]= str[ch]-32;
+    printf("%s",str);
+            return 0;
+}
 8.Write a program in C to convert string to lowercase
+#include<stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    int ch;
+    char str[SIZE];
+    fgets(str,sizeof(str),stdin);
+    for(ch=0;str[ch]!='\0';ch++)
+           str[ch]= str[ch]+32;
+    printf("%s",str);
+            return 0;
+}
 9.Write a program in C to convert string to toggle case	
+#include<stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    int ch;
+    char str[SIZE];
+    fgets(str,sizeof(str),stdin);
+    for(ch=0;str[ch]!='\0';ch++)
+    {
+          if(str[ch]>='a' && str[ch]<='z')
+          str[ch]= str[ch]-32;
+          else if (str[ch]>='A' && str[ch]<='Z')
+          str[ch]= str[ch]+32;
+    }
+    printf("%s",str);
+            return 0;
+}
 10.Write a program in C to count the total number of words in a Sentence.
+#include<stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    int ch,word=0;
+    char str[SIZE];
+    fgets(str,sizeof(str),stdin);
+    for(ch=0;str[ch]!='\0';ch++)
+    {
+         if(str[ch]==' ' || str[ch]=='\t' || str[ch]=='\n')
+         word++;
+    }
+    printf("%d",word+1);
+            return 0;
+}
 11.Write a program in C to separate individual characters from a string.
 12.Write a program in C to print individual characters of a string in reverse order.
