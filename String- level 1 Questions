@@ -28,7 +28,28 @@ int main() {
     return 0;
 }
 
+3.Write a program in C to copy a string1 to string 2 without using library functions.
 
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+#define SIZE 100
+int main() {
+    char name[SIZE],name1[SIZE];
+    fgets(name,sizeof(name),stdin);
+    int index=0;
+     while(name[index]!='\0')
+     {
+    name1[index]=name[index];
+    index++;
+    }
+    name1[index]='\0';
+    printf("name string:%s",name);
+    printf("\nCopied string:%s",name1);
+    printf("number cahracters copied %d",index);
+    
+            return 0;
+}
 
 
 
