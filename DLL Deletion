@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include<malloc.h>
+typedef struct node
+{
+    struct node *prev;
+    int data;
+    struct node *next;
+} NODE;
+NODE *start, *end, *tptr, *newnode;
+void insertNode(int num)
+{
+    newnode = (NODE *)malloc(sizeof(NODE));
+    newnode->prev  = NULL;
+    newnode->data = num;
+    newnode->next = NULL;
+    if(start == NULL) //list is empty
+        start = end = newnode;
+    else
+    {
+        for(tptr = start; tptr; tptr = tptr->next);
+        if(tptr == start) //insertion at beginning
+        {
+            newnode->next = start;
+            start->prev = newnode;
+            start = newnode;
+        }
+        else if (tptr == NULL) //insertion at ending
+        {
+            newnode->prev = end;
+            end->next = newnode;
+            end = newnode;
+        }
+        else //insertion somewhere b/w
+        {
+            newnode->prev = tptr->prev;
+            newnode->next = tptr;
+            tptr->prev->next = newnode;
+            tptr->prev = newnode;
+        }
+    }
+}
+
+int deleteNode(int num)
+{
+    if(start==NULL)
+        return -1;
+    else
+    {
+        for(tptr = start; tptr && tptr-> data != num; tptr = tptr->next);
+        if(tptr==start)
+        {
+            start->next->prev=start->prev;
+            start=start->next;
+            free(tptr);
+
+        }
+        else if(tptr==end)
+        {
+            end->prev->next=end->next;
+            end=end->prev;
+            free(tptr);
+        }
+        else
+        {
+            tptr->prev->next = tptr->next;
+            tptr->next->prev = tptr->prev;
+            free(tptr);
+        }
+    }
+}
+void displayListFWD()
+{
+    for(tptr = start; tptr; tptr = tptr->next)
+        printf("%d-> ",tptr->data);
+    printf("\n");
+}
+void displayListBWD()
+{
+    for(tptr = end; tptr; tptr = tptr->prev)
+        printf("%d-> ", tptr->data);
+    printf("\n");
+}
+int main()
+{
+    insertNode(10);
+    insertNode(20);
+    insertNode(30);
+    insertNode(40);
+    insertNode(5);
+    insertNode(25);
+    displayListBWD();
+    displayListFWD();
+    deleteNode(10);
+    displayListFWD();
+    deleteNode(25);
+    displayListFWD();
+        
+}
