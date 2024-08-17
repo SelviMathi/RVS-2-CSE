@@ -16,7 +16,7 @@ void push(int val)
 }
  int pop()
  {
-     if(top==0)
+     if(top==-1)
      {
          printf("Empty");
      }
