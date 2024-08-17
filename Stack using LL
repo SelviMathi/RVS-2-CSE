@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <malloc.h>
+
+struct node
+    {
+        int data;
+        struct node*next;
+    }STACK;
+
+typedef struct node*StackPTR;
+StackPTR newnode,top,tptr;
+void push(int num)
+{
+    newnode = (StackPTR)malloc(sizeof(STACK));
+    newnode->data = num;
+    newnode->next = NULL;
+if(top==NULL)
+top=newnode;
+else
+newnode->next=top;
+top=newnode;
+//printf("%d ",top->data);
+
+}
+int pop()
+{
+
+    if (top==NULL)
+           return -1;
+    else
+        {
+        tptr=top;
+       int temp=top->data;
+        top=top->next;
+        free(tptr);
+        return temp;
+        }
+}
+void display()
+{
+    printf("\n");
+    for(tptr=top;tptr;tptr=tptr->next)
+    printf("%d ",tptr->data);
+}
+int main()
+{
+    push(10);
+    push(5);
+    push(20);
+    display();
+    
+    pop();
+   display();
+   pop();
+   display();
+}
