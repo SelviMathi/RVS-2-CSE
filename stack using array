@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+#define MAX_SIZE 20
+int stack[MAX_SIZE];
+int top=-1;
+
+void push(int val)
+{
+    if(top==MAX_SIZE-1)
+    {
+        printf("Full");
+
+    }
+    stack[++top]=val;
+
+}
+ int pop()
+ {
+     if(top==0)
+     {
+         printf("Empty");
+     }
+     stack[top--];
+ }
+ void display()
+ {
+  printf("\n Stack elements: ");
+    for (int i = 0; i <=top; i++)
+        {
+        printf("%d ", stack[i]);
+    }
+ }
+ void main()
+ {
+     push(10);
+     push(8);
+     push(15);
+     display();
+pop();
+   display();
+  }
